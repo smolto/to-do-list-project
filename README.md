@@ -38,7 +38,7 @@ npm start
 
 ### ***Use linter***  
 * * *
-If you wanted to run this site in production, you should install modules then build the site with npm run build and run it with npm start:
+If you wanted to check if project has no code problems using eslint then run npm run lint:
 ```
 npm install
 npm run lint
