@@ -36,6 +36,14 @@ npm run build
 npm start
 ```
 
+### ***Use linter***  
+* * *
+If you wanted to run this site in production, you should install modules then build the site with npm run build and run it with npm start:
+```
+npm install
+npm run lint
+```
+
 ### ***Configuration***  
 * * *
 It is not implemented yet
