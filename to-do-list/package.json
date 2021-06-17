@@ -9,6 +9,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^1.4.0",
+    "dotenv": "^10.0.0",
     "next": "10.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2"
