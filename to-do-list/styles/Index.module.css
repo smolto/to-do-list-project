@@ -1,0 +1,37 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* .content a{
+  width: 100%;
+} */
+
+.user_info {
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.user_info-img {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.user_info-img img{
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.user_info-email {
+  margin-bottom: 1.3rem;
+}
