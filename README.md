@@ -6,7 +6,7 @@ This project consists of a list of tasks realtime shared between several users. 
 <br/>
 
 # ***Architecture***
-Frontend/Backend 🠊 Next.js (https://nextjs.org/)
+Frontend/Backend => Next.js (https://nextjs.org/)
 Database => Dgraph (https://dgraph.io/)
 <br/>
 <br/>
@@ -14,8 +14,8 @@ Database => Dgraph (https://dgraph.io/)
 
 # ***Frontend/Backend Deployment***
 ## ***Technologies***  
-Node version ==> v14.17.0
-NPM version ==> v7.16.0
+Node version == v14.17.0   
+NPM version => v7.16.0
 
 ### ***Running locally in development mode***  
 * * *
@@ -46,4 +46,24 @@ npm run lint
 
 ### ***Configuration***  
 * * *
-It is not implemented yet
+To configure correctly this app. firstly you need to create a .env.local file inside to-do-list/. This file must contains every single value that is placed in .env
+```
+AUTH0_SECRET=
+AUTH0_BASE_URL=http://localhost:3000
+AUTH0_ISSUER_BASE_URL=
+AUTH0_CLIENT_ID=
+AUTH0_CLIENT_SECRET=
+AUTH0_REDIRECT_URI=http://localhost:3000/api/callback
+AUTH0_POST_LOGOUT_REDIRECT_URI=http://localhost:3000/
+AUTH_COOKIE_SECRET=
+```
+
+### ***Authentication***  
+In this web app, we used Auth0 (https://auth0.com/docs/). Everything is prepared to work without making any changes. ***IMPORTANT: DON'T FORGET TO FILL OUT EVERY SINGLE ENVIROMENT VARIABLES***  
+
+TUTORIAL:
+
+* https://auth0.com/docs/quickstart/webapp/nextjs/01-login (web)
+* https://www.youtube.com/watch?v=egnVe9lXY0E (video)
+
+
