@@ -46,11 +46,11 @@ npm run lint
 
 ### ***Configuration***  
 * * *
-To configure correctly this app. firstly you need to create a .env.local file inside to-do-list/. This file must contains every single value that is placed in .env
+To configure correctly this app. firstly you need to create a .env file inside to-do-list/. This file must contains every single value that is placed in .env
 ```
 AUTH0_SECRET=''
-AUTH0_BASE_URL='http://localhost:3000'
-AUTH0_ISSUER_BASE_URL='https://your-domain'
+AUTH0_BASE_URL=''
+AUTH0_ISSUER_BASE_URL=''
 AUTH0_CLIENT_ID=''
 AUTH0_CLIENT_SECRET=''
 ```
