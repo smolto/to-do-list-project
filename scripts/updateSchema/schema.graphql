@@ -1,0 +1,42 @@
+enum AccessLevel {
+  ADMIN
+  MANAGER
+  WORKER
+}
+
+type User {
+  name:String
+  email:String! @id
+  picture:String
+}
+
+type UserRole {
+  user:User
+  level:AccessLevel
+}
+
+type WorkspaceBoard {
+  id:ID
+  name:String
+  users:[UserRole]
+}
+
+type Board {
+  id:ID
+  name:String
+  lists:[List]
+  workspace(id: ID!):WorkspaceBoard
+}
+
+type List {
+  id:ID
+  name:String
+  tasks:[Task]
+}
+
+type Task {
+  id:ID
+  title:String
+  description:String
+  users: [User]
+}
