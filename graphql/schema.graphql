@@ -15,7 +15,7 @@ type UserRole {
   level:AccessLevel
 }
 
-type WorkspaceBoard {
+type Workspace {
   id:ID
   name:String
   users:[UserRole]
@@ -25,7 +25,7 @@ type Board {
   id:ID
   name:String
   lists:[List]
-  workspace(id: ID!):WorkspaceBoard
+  workspace(id: ID!):Workspace
 }
 
 type List {
