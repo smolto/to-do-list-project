@@ -5,20 +5,22 @@ enum AccessLevel {
 }
 
 type User {
-  name:String
-  email:String! @id
-  picture:String
+  name: String
+  email: String! @id
+  picture: String
+  roles: [UserRole] @hasInverse (field: user)
 }
 
 type UserRole {
-  user:User
-  level:AccessLevel
+  user: User
+  level: AccessLevel
+  workspace: Workspace
 }
 
 type Workspace {
   id:ID
   name:String
-  users:[UserRole]
+  users:[UserRole] @hasInverse(field:workspace)
 }
 
 type Board {
