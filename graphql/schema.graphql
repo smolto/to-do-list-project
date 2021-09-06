@@ -1,0 +1,44 @@
+enum AccessLevel {
+  ADMIN
+  MANAGER
+  WORKER
+}
+
+type User {
+  name: String
+  email: String! @id
+  picture: String
+  roles: [UserRole] @hasInverse (field: user)
+}
+
+type UserRole {
+  user: User
+  level: AccessLevel
+  workspace: Workspace
+}
+
+type Workspace {
+  id:ID
+  name:String
+  users:[UserRole] @hasInverse(field:workspace)
+}
+
+type Board {
+  id:ID
+  name:String
+  lists:[List]
+  workspace(id: ID!):Workspace
+}
+
+type List {
+  id:ID
+  name:String
+  tasks:[Task]
+}
+
+type Task {
+  id:ID
+  title:String
+  description:String
+  users: [User]
+}
